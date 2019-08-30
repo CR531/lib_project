@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import data from "./data.json";
 import Select from 'react-select';
 import "./index.css";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
 const options = [
     { value: 'Windows_7_PC', label: 'Windows 7 PC' },
     { value: 'Mac_AL_CSM_01', label: 'AL CSM 01 Mac' }
@@ -11,7 +17,7 @@ class Cspace extends Component {
         super();
         this.state = {
             data,
-            selectedOption: null
+            selectedOption: ""
         }
     }
     handleChange = selectedOption => {
@@ -34,13 +40,8 @@ class Cspace extends Component {
                         <li> Saturday: 01: 00 PM to 07: 00 PM </li>
                         <li> Sunday: 01: 00 PM to 09: 00 PM </li>
                     </ol>
-                    {/* {this.state.data && this.state.data.ablah_data.Windows_7_PC.map((e, i) =>
-                  <ul>
-                  <li key={i}>{e}</li>
-                  </ul>
-                  )} */
-                    }
                 </div>
+                <p><h3>Available Software List</h3></p>
                 <div class="cspace_select">
                     <Select
                         label="Available Software List"
@@ -48,6 +49,33 @@ class Cspace extends Component {
                         onChange={this.handleChange}
                         options={options}
                     /> </div>
+                <br />
+                {this.state.selectedOption.value === "Windows_7_PC" && this.state.data.ablah_data.Windows_7_PC.map((e, i) =>
+                    <Paper className="paper_css">
+                        <Table className="table_css">
+                            <TableBody>
+                                <TableRow key={i}>
+                                    <TableCell component="th" scope="row">
+                                        {e}
+                                    </TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </Paper>
+                )}
+                {this.state.selectedOption.value === "Mac_AL_CSM_01" && this.state.data.ablah_data.Mac_AL_CSM_01.map((e, i) =>
+                    <Paper className="paper_css">
+                        <Table className="table_css">
+                            <TableBody>
+                                <TableRow key={i}>
+                                    <TableCell component="th" scope="row">
+                                        {e}
+                                    </TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </Paper>
+                )}
             </div>
         )
     }

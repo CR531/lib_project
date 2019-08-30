@@ -54,3 +54,12 @@ ul.header li a {
 .cspace_select {
   width: 40%;
 }
+
+.paper_css{
+  width: 40%;
+  margin-top: 3;
+  overflow-x: auto;
+}
+.table_css{
+   min-width: 650;
+}
