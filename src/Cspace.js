@@ -7,6 +7,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Cspace_Logo from "./Images/Cspace_Logo.jpg";
 
 const options = [
     { value: 'Windows_7_PC', label: 'Windows 7 PC' },
@@ -26,7 +27,10 @@ class Cspace extends Component {
     };
     render() {
         console.log(data);
-        return (
+        return (<div>
+            <div>
+                <img className="logo_div_css" align="center" height="80%" width="50%" src={Cspace_Logo} alt="CSpace Logo" />
+            </div>
             <div>
                 <div>
                     <h2> C - Space </h2>
@@ -77,6 +81,7 @@ class Cspace extends Component {
                     </Paper>
                 )}
             </div>
+        </div>
         )
     }
 }
