@@ -20,14 +20,14 @@ class App extends Component {
           <ul className="header">
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/cspace">C-Space</NavLink></li>
-            <li><NavLink to="/contactus">Contact Us</NavLink></li>
             <li><NavLink to="/cspace_zones">C-Space Zones</NavLink></li>
+            <li><NavLink to="/contactus">Contact Us</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={Home} />
             <Route path="/cspace" component={Cspace} />
-            <Route path="/contactus" component={Contact} />
             <Route path="/cspace_zones" component={Cspace_zones} />
+            <Route path="/contactus" component={Contact} />
           </div>
 
         </div>

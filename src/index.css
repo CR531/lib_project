@@ -63,3 +63,24 @@ ul.header li a {
 .table_css{
    min-width: 650;
 }
+
+.logo_div_css {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* C-Space Zones*/
+.exp_heading{
+  font-weight: bold;
+  font-size: larger;
+}
+.image_css{
+  width:100%;
+  height: 100%;
+}
+.data_css{
+  margin-left: 5%;
+  margin-right: 5%;
+  font-weight: 600;
+  font-style: oblique;
+}
