@@ -4,7 +4,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-
+// import foldio from "./Images/foldio.jpg";
 class Cspace_zones extends Component {
     constructor(props) {
         super(props);
@@ -50,6 +50,8 @@ class Cspace_zones extends Component {
                     this.state.isHovering &&
                     <div>
                         {/* Hovering right meow! */}
+
+                        {/* <img src={foldio}></img> */}
                     </div>
                 }
             </div>
