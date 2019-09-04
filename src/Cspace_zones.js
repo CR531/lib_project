@@ -1,60 +1,113 @@
 import React, { Component } from "react";
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-// import foldio from "./Images/foldio.jpg";
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import "./index.css";
+import Media_Zone from "./Images/Media_Zone.jpg";
+import One_Button_Studio from "./Images/One_Button_Studio.jpg";
+import Product_Photo_Studio from "./Images/Product_Photo_Studio.jpg";
+import Sound_Booth_Zone from "./Images/Sound_Booth_Zone.JPG";
+import Virtual_Reality from "./Images/Virtual_Reality.jpg";
+import { Card } from "@material-ui/core";
+
+
 class Cspace_zones extends Component {
-    constructor(props) {
-        super(props);
-        this.handleMouseHover = this.handleMouseHover.bind(this);
-        this.state = {
-            isHovering: false,
-            zones: ["Media Design Zone", "Sound Booth", "Virtual Reality Zone", "Advanced Development Zone", "One Button Studio", "Product Photo Studio"]
-        };
-    }
-
-    handleMouseHover() {
-        this.setState(this.toggleHoverState);
-    }
-
-    toggleHoverState(state) {
-        return {
-            isHovering: !state.isHovering,
-        };
-    }
-
     render() {
         return (
             <div>
-                <div
-                    onMouseEnter={this.handleMouseHover}
-                    onMouseLeave={this.handleMouseHover}
-                >
-                    {this.state.zones && this.state.zones.map((e, i) =>
-                        <Paper className="paper_css">
-                            <Table className="table_css">
-                                <TableBody>
-                                    <TableRow key={i}>
-                                        <TableCell component="th" scope="row">
-                                            {e}
-                                        </TableCell>
-                                    </TableRow>
-                                </TableBody>
-                            </Table>
-                        </Paper>
-                    )}
-                </div>
-                {
-                    this.state.isHovering &&
-                    <div>
-                        {/* Hovering right meow! */}
-
-                        {/* <img src={foldio}></img> */}
-                    </div>
-                }
-            </div>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                    >
+                        <h2 className="exp_heading">The Media Design Zone</h2>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Card>
+                            <img
+                                className="image_css"
+                                src={Media_Zone}
+                                alt="Media Zone"
+                            >
+                            </img>
+                        </Card>
+                        <Card>
+                            The Media Design Zone is dedicated for media editing, recording, creative writing, website development and publishing. There are two Mac based workstations and one Windows 10 based workstation along with a sound booth.
+                        </Card>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                    >
+                        <h2 className="exp_heading">Sound Booth</h2>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Card><img className="image_css" src={Sound_Booth_Zone} alt="Sound Booth" /></Card>
+                        <div>
+                            The Sound Booth may be scheduled through the Sound Booth calendar by any currently enrolled WSU student, or any current WSU employee. The C-Space assistant will unlock the booth once the person who made the Sound Booth reservation checks in at the C-Space Help Desk. The individual who schedules the Sound Booth will be considered the main user and is responsible for any damage or misuse of the equipment, even if a group is working on a project together. Users must not leave equipment unattended while it is checked out to them. No food or drink is permitted in the Sound Booth.
+                           </div>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                    >
+                        <h2 className="exp_heading">Virtual Reality Zone</h2>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <img height="80%" width="40%" src={Virtual_Reality} alt="Virtual Reality" />
+                        <Typography>
+                            The AR/VR provides the virtual reality experience to patrons. VR involves using 3D graphics and advanced interactions to immerse a real-world user in a simulated environment. The VR/AR zone has Oculus Rift, Dell VR’s and a high-performance gaming laptop. This can help students in game designing.
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                    >
+                        <h2 className="exp_heading">Advanced Development Zone</h2>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography>
+                            The Advanced Development Zone is dedicated to prototype development. The zone is comprised of two high performance workstations, namely the CAD workstation and the Android/iOS app development workstation. The former is dedicated for CAD, simulation, and animation and the later is dedicated for application development.
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                    >
+                        <h2 className="exp_heading">One button studio</h2>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Card><img className="image_css" src={One_Button_Studio} alt="One Button Studio" /></Card>
+                        <Typography>
+                            One button studio is a simplified video recording studio where in the students can record high quality videos without any hassle of setting up the lights and camera. You only need to carry a flash drive with you. The studio is available for all the Wichita State University staff, faculty and students.
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                    >
+                        <h2 className="exp_heading">Product Photo Studio</h2>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Card><img className="image_css" src={Product_Photo_Studio} alt="Product Studio" /></Card>
+                        <Typography>
+                            Product Photo studio provides studio like effect to take professional photograph of your products, that could be published in magazines or brochures. It has special feature for taking 360 image of the product. The photos taken in Product Photo studio can be used for Making portfolio, Selling the product online and Blogging.
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+            </div >
         );
     }
 }
