@@ -84,3 +84,14 @@ ul.header li a {
   font-weight: 600;
   font-style: oblique;
 }
+
+/*Home.js*/
+.paragraph_css_1{
+    font-weight: bolder;
+  font-style: oblique;
+}
+
+.paragraph_css_2{
+   display: block;
+   text-align: center;
+}

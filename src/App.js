@@ -29,7 +29,6 @@ class App extends Component {
             <Route path="/cspace_zones" component={Cspace_zones} />
             <Route path="/contactus" component={Contact} />
           </div>
-
         </div>
       </HashRouter >
     );
