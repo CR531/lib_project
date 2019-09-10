@@ -34,7 +34,7 @@ class Cspace_zones extends Component {
                         </Card>
                         <Card>
                             <h3 className="data_css">
-                                The Media Design Zone (Chakradhar Reddy) is dedicated for media editing, recording, creative writing, website development and publishing. There are two Mac based workstations and one Windows 10 based workstation along with a sound booth.
+                                The Media Design Zone is dedicated for media editing, recording, creative writing, website development and publishing. There are two Mac based workstations and one Windows 10 based workstation along with a sound booth.
                         </h3></Card>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
