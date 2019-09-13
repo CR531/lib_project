@@ -3,6 +3,10 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+variables:
+  Build.SourcesDirectory: C:\CR531\ReactProject\lib_project\build
+  Build.TargetDirectory: C:\Users\chakr\Desktop\Personal
+
 trigger:
 - master
 
@@ -22,6 +26,6 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'C:/CR531/ReactProject/lib_project/build'
-    Contents: '**'
-    targetFolder: 'C:/Users/chakr/Desktop/Personal'
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**/*'
+    targetFolder: '$(Build.TargetDirectory)'
