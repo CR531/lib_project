@@ -20,9 +20,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: CopyFiles@2
+- task: CopyFiles@1
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    Contents: |
-     C:\CR531\ReactProject\lib_project\build\**
-    TargetFolder: 'C:\Users\chakr\Desktop\Personal'
+    SourceFolder: 'C:\CR531\ReactProject\lib_project\build'
+    Contents:
+     \C:\CR531\ReactProject\lib_project\build\**
+    TartgetFolder: 'C:\Users\chakr\Desktop\Personal'
