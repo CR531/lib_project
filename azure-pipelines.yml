@@ -4,8 +4,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 variables:
-  Build.SourcesDirectory: C:\CR531\ReactProject\lib_project\build
-  Build.TargetDirectory: C:\Users\chakr\Desktop\Personal
+  Build.SourcesDirectory: C:/CR531/ReactProject/lib_project/build
+  Build.TargetDirectory: C:/Users/chakr/Desktop/Dest
 
 trigger:
 - master
@@ -27,5 +27,5 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**/*'
+    Contents: '*.PNG'
     targetFolder: '$(Build.TargetDirectory)'
