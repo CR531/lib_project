@@ -22,5 +22,6 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: C:\CR531\ReactProject\lib_project\build\*
-    targetFolder: C:\Users\chakr\Desktop\Personal
+    SourceFolder: 'C:/CR531/ReactProject/lib_project/build'
+    Contents: '**'
+    targetFolder: 'C:/Users/chakr/Desktop/Personal'
