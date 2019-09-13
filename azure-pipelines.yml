@@ -27,5 +27,5 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '*.PNG'
+    Contents: '**/*'
     targetFolder: '$(Build.TargetDirectory)'
