@@ -23,7 +23,7 @@ steps:
   displayName: 'npm install and build'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'C:\CR531\ReactProject\lib_project\build'
+    SourceFolder: '/home/vsts/work/1/s/build'
     Contents: '**.txt'
     TargetFolder: 'C:\Users\chakr\Desktop\Dest'
 - task: CopyFiles@2
