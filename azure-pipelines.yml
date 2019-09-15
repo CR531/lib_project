@@ -21,16 +21,9 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/home/vsts/work/1/s/build'
+    SourceFolder: 'C:\CR531\ReactProject\lib_project\build\'
     Contents: '**.txt'
     TargetFolder: 'C:\Users\chakr\Desktop\Dest'
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'C:\CR531\ReactProject\lib_project\build'
-    Contents: '**/*.pdf'
-    targetFolder: 'C:\Users\chakr\Desktop\Dest'
-    OverWrite: true
-    flattenFolders: true
-    cleanTargetFolder: true
