@@ -26,6 +26,9 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**/*'
-    targetFolder: '$(Build.TargetDirectory)'
+    SourceFolder: 'C:\CR531\ReactProject\lib_project\build'
+    Contents: '**/*.pdf'
+    targetFolder: 'C:\Users\chakr\Desktop\Dest'
+    OverWrite: true
+    flattenFolders: true
+    cleanTargetFolder: true
