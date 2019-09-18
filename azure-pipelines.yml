@@ -22,8 +22,3 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'C:\CR531\ReactProject\lib_project\build\'
-    Contents: '**.txt'
-    TargetFolder: 'C:\Users\chakr\Desktop\Dest'
